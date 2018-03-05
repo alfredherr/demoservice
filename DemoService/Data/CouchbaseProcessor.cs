@@ -78,7 +78,7 @@ namespace DemoService.Data
             }
 
             string name = CouchbaseConfigManager.Instance.AccountBucketName;
-            string query = $"{SELECTACCOUNT} from {name} WHERE Username = '{username}'";
+            string query = $"{SELECTACCOUNT} from {name} WHERE UserName = '{username}'";
 
             return DataClient.ExecuteQuery(name, query);
         }
