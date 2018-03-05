@@ -5335,7 +5335,6 @@
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.AspNetCore.Cors": "2.0.1",
           "Microsoft.AspNetCore.StaticFiles": "2.0.0",
-          "Microsoft.NETCore.App": "2.0.0",
           "Swashbuckle.AspNetCore": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "1.0.0",
           "Swashbuckle.AspNetCore.SwaggerUi": "1.0.0",
@@ -13809,41 +13808,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jcruz\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/alfredherr/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService.Tests\\DemoService.Tests.csproj",
+      "projectUniqueName": "/Users/alfredherr/Projects/demoservice/DemoService.Tests/DemoService.Tests.csproj",
       "projectName": "DemoService.Tests",
-      "projectPath": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService.Tests\\DemoService.Tests.csproj",
-      "packagesPath": "C:\\Users\\jcruz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService.Tests\\obj\\",
+      "projectPath": "/Users/alfredherr/Projects/demoservice/DemoService.Tests/DemoService.Tests.csproj",
+      "packagesPath": "/Users/alfredherr/.nuget/packages/",
+      "outputPath": "/Users/alfredherr/Projects/demoservice/DemoService.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jcruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/alfredherr/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://repo.concordservicing.com:8081/nexus/service/local/nuget/nuget-public/": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService\\DemoService.csproj": {
-              "projectPath": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService\\DemoService.csproj"
+            "/Users/alfredherr/Projects/demoservice/DemoService/DemoService.csproj": {
+              "projectPath": "/Users/alfredherr/Projects/demoservice/DemoService/DemoService.csproj"
             }
           }
         }
@@ -13857,30 +13850,31 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "NUnit3TestAdapter": {
-            "target": "Package",
-            "version": "3.9.0"
-          },
           "CouchbaseNetClient": {
             "target": "Package",
-            "version": "2.5.3"
-          },
-          "Moq": {
-            "target": "Package",
-            "version": "4.7.145"
-          },
-          "NUnit": {
-            "target": "Package",
-            "version": "3.9.0"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "[2.5.3, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "15.5.0"
+            "version": "[15.5.0, )"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "[4.7.145, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.9.0, )"
+          },
+          "NUnit3TestAdapter": {
+            "target": "Package",
+            "version": "[3.9.0, )"
           }
         },
         "imports": [

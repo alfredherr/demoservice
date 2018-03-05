@@ -66,6 +66,25 @@ namespace DemoService.Data
         }
 
         /// <summary>
+        /// gest the total balance for all accounts in a given portfolio 
+        /// </summary>
+        /// <param name="portfolioName">the name of the portfolio to retrieve accounts for</param>
+        /// <returns>Returns a list of accounts</returns>
+       
+        public object GetPortfoliosByAggregate(string portfolioName)
+        {
+            if (String.IsNullOrEmpty(portfolioName))
+            {
+                throw new ArgumentException("invalid or null portfolio number");
+            }
+
+            string name = CouchbaseConfigManager.Instance.AccountBucketName;
+            string query = $"SELECT SUM(CurrentBalance) AS TotalBalance  from {name} WHERE PortfolioName = '{portfolioName}'";
+
+            return DataClient.ExecuteQuery(name, query);
+        }
+
+        /// <summary>
         /// gets all account for a given user 
         /// </summary>
         /// <param name="username">the name of the user to retrieve accounts for</param>

@@ -24,6 +24,44 @@ namespace DemoService.Controllers
             :base(dataProcessor)
         { }
 
+        
+        /// <summary>
+        /// gets total balance of accounts for a given portfolio
+        /// </summary>
+        /// <param name="portfolioName">the name of the portfolio for which to pull accounts</param>
+        /// <response code="200">Success</response>
+        /// <response code="400">Something failed</response>
+        [Produces("application/json")]
+        [Route("GetPortfoliosByAggregate")]
+        [HttpGet]
+        [ProducesResponseType(typeof(ErrorDetails), 400)]
+        public object GetPortfoliosByAggregate([FromQuery] string portfolioName)
+        {
+            if (String.IsNullOrEmpty(portfolioName))
+            {
+                return BadRequest(
+                    new ErrorDetails {
+                        Message = "portfolioName cannot be null or empty",
+                        Code = (int)ErrorCodes.InvalidInputParameters}
+                );
+            }
+            
+            object result;
+            
+            try
+            {
+                result = Ok(DataProcessor.GetPortfoliosByAggregate(portfolioName));
+            }
+            catch (Exception ex)
+            {
+                result = BadRequest(
+                    new ErrorDetails {
+                        Message = ex.Message,
+                        Code = (int)ErrorCodes.CouchbaseProcessing }
+                );
+            }
+            return result;
+        }
         /// <summary>
         /// gets the list of accounts for a given portfolio
         /// </summary>

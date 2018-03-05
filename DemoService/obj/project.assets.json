@@ -12688,35 +12688,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jcruz\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/alfredherr/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService\\DemoService.csproj",
+      "projectUniqueName": "/Users/alfredherr/Projects/demoservice/DemoService/DemoService.csproj",
       "projectName": "DemoService",
-      "projectPath": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService\\DemoService.csproj",
-      "packagesPath": "C:\\Users\\jcruz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jcruz\\Source\\Repos\\DemoService\\DemoService\\obj\\",
+      "projectPath": "/Users/alfredherr/Projects/demoservice/DemoService/DemoService.csproj",
+      "packagesPath": "/Users/alfredherr/.nuget/packages/",
+      "outputPath": "/Users/alfredherr/Projects/demoservice/DemoService/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jcruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/alfredherr/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://repo.concordservicing.com:8081/nexus/service/local/nuget/nuget-public/": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
@@ -12732,42 +12726,43 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "System.Security.Cryptography.Algorithms": {
-            "target": "Package",
-            "version": "4.3.1"
-          },
-          "Swashbuckle.AspNetCore.SwaggerUi": {
-            "target": "Package",
-            "version": "1.0.0"
-          },
           "CouchbaseNetClient": {
             "target": "Package",
-            "version": "2.5.2"
+            "version": "[2.5.2, )"
           },
-          "Swashbuckle.AspNetCore.Swagger": {
+          "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "1.0.0"
+            "version": "[2.0.0, )"
           },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.AspNetCore.StaticFiles": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "1.0.0"
+            "version": "[1.0.0, )"
           },
-          "Microsoft.AspNetCore.All": {
+          "Swashbuckle.AspNetCore.Swagger": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[1.0.0, )"
           },
-          "Microsoft.AspNetCore.StaticFiles": {
+          "Swashbuckle.AspNetCore.SwaggerUi": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "[1.0.0, )"
+          },
+          "System.Security.Cryptography.Algorithms": {
+            "target": "Package",
+            "version": "[4.3.1, )"
           }
         },
         "imports": [

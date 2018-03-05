@@ -26,6 +26,11 @@ namespace DemoService.Data
         object GetAccountsByPortfolioName(string portfolioName);
 
         /// <summary>
+        /// sums all accounts balances in a given portfolio
+        /// </summary>
+        object GetPortfoliosByAggregate(string portfolioName);
+
+        /// <summary>
         /// gets a list of accounts for a given username
         /// </summary>
         object GetAccountsByUsername(string username);
